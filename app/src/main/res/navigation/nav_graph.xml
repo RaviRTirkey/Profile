@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileHome">
+
+    <fragment
+        android:id="@+id/profileHome"
+        android:name="com.example.profile.ProfileHome"
+        android:label="fragment_profile_home"
+        tools:layout="@layout/fragment_profile_home" >
+        <action
+            android:id="@+id/action_profileHome_to_editProfile"
+            app:destination="@id/editProfile" />
+        <action
+            android:id="@+id/action_profileHome_to_scoreAndBalance"
+            app:destination="@id/scoreAndBalance" />
+        <action
+            android:id="@+id/action_profileHome_to_referAndEarn"
+            app:destination="@id/referAndEarn" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.profile.EditProfile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/scoreAndBalance"
+        android:name="com.example.profile.ScoreAndBalance"
+        android:label="fragment_score_and_balance"
+        tools:layout="@layout/fragment_score_and_balance" />
+    <fragment
+        android:id="@+id/referAndEarn"
+        android:name="com.example.profile.ReferAndEarn"
+        android:label="fragment_refer_and_earn"
+        tools:layout="@layout/fragment_refer_and_earn" />
+</navigation>

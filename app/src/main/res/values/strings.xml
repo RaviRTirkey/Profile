@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="back">back</string>
+    <string name="support">support</string>
+    <string name="icon">icon</string>
+    <string name="credit_score">credit score </string>
+    <string name="refresh_available">• REFRESH AVAILABLE</string>
+    <string name="arrow">arrow</string>
+    <string name="bank_balance">bank balance</string>
+    <string name="check">check</string>
+    <string name="your_rewards_amp_benefits"><![CDATA[YOUR REWARDS & BENEFITS]]></string>
+    <string name="cashback_balance">cashback balance</string>
+    <string name="forward">forward</string>
+    <string name="coins">coins</string>
+    <string name="win_upto_rs_1000">win upto Rs 1000</string>
+    <string name="refer_and_earn">refer and earn</string>
+    <string name="transactions_amp_support"><![CDATA[TRANSACTIONS & SUPPORT]]></string>
+    <string name="all_transactions">all transactions</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

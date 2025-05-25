@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileHome">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:contentDescription="@string/back"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="18dp"
+            app:layout_constraintStart_toEndOf="@+id/back_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/supportButton"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:background="@drawable/black_rounded_button"
+            android:drawableStart="@drawable/baseline_message_24"
+            android:elevation="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="16dp"
+            android:text="@string/support"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteVarient"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="64dp"
+            android:layout_height="64sp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/rounded_image_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+        <TextView
+            android:id="@+id/userNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="andaz Kumar"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/profilePic"
+            app:layout_constraintTop_toTopOf="@+id/profilePic" />
+
+        <TextView
+            android:id="@+id/userDetailsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="member since Dec, 2020"
+            android:textColor="@color/whiteVarient"
+            app:layout_constraintBottom_toBottomOf="@+id/profilePic"
+            app:layout_constraintStart_toEndOf="@+id/profilePic"
+            app:layout_constraintTop_toBottomOf="@+id/userNameTV" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/round_button"
+            android:drawableStart="@drawable/ic_pen"
+            android:layout_marginEnd="16dp"
+            android:padding="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/userDetailsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userNameTV" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/CREDgarageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/rectangle"
+            android:drawableStart="@drawable/car_round"
+            android:text="\t\tget to know your vehicle, inside out \n\t\tCRED garage "
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:paddingStart="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePic" />
+
+
+        <LinearLayout
+            android:id="@+id/creditScoreLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/CREDgarageBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/icon"
+                android:src="@drawable/circular_meter"
+                app:tint="@color/whiteVarient" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/credit_score"
+                android:textColor="@color/whiteVarient" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh_available"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/creditScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginEnd="16dp"
+                android:text="757"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/creditScoreArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/arrow"
+                android:src="@drawable/long_arrow"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cashbackLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/creditScoreLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/icon"
+                android:src="@drawable/rupee_circular"
+                app:tint="@color/whiteVarient" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="lifetime cashback"
+                android:textColor="@color/whiteVarient" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="₹3"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/lifetimeCashbackArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/arrow"
+                android:src="@drawable/long_arrow"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bankBalanceLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/cashbackLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/icon"
+                android:src="@drawable/rupee_bag"
+                app:tint="@color/whiteVarient" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/bank_balance"
+                android:textColor="@color/whiteVarient" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/check"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/bankBalanceArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/long_arrow"/>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/rewardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_rewards_amp_benefits"
+            android:textColor="@color/whiteVarient"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/bankBalanceLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/cashback_balance"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rewardTitle" />
+        <TextView
+            android:id="@+id/cashbackBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="₹3"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+        <ImageView
+            android:id="@+id/cashbackForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/forward"
+            android:src="@drawable/baseline_arrow_forward"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cashbackBalance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="@color/whiteVarient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cashbackBalance" />
+
+        <TextView
+            android:id="@+id/coinsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/coins"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="26,46,583"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coinsTV" />
+
+        <ImageView
+            android:id="@+id/coinsForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/forward"
+            android:src="@drawable/baseline_arrow_forward"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/coins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/coinsTV" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="@color/whiteVarient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coins" />
+
+
+
+        <TextView
+            android:id="@+id/referTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/win_upto_rs_1000"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/winTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refer_and_earn"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/referTV"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/referAndEarnForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_forward"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/winTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/referTV" />
+
+
+        <TextView
+            android:id="@+id/txnTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transactions_amp_support"
+            android:textColor="@color/whiteVarient"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/winTV"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/allTxn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_transactions"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txnTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/transactionForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/forward"
+            android:src="@drawable/baseline_arrow_forward"
+            app:layout_constraintBottom_toBottomOf="@+id/allTxn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txnTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
